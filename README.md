@@ -1,19 +1,24 @@
-# ex407-study-guide
+# EX407 Study Guide
 
-### This study guide aims to cover all topics for study in the Red Hat EX407 Red Hat Certificate of Expertise in Ansible Automation exam
+### This study guide attempts to cover topics for study in the [Red Hat EX407 Red Hat Certificate of Expertise in Ansible Automation exam](https://www.redhat.com/en/services/training/ex407-red-hat-certificate-expertise-ansible-automation)
 
+Got something to add? Make a Pull Request!
+
+# **Disclaimer**
+
+#### This guide does not divulge any information contained in the test, or style of the objectives. Merely publicly available information based on the wording of the objectives.
 
 
 # Understand core components of Ansible
-# Inventories
-###Supply inventory with `-i` flag with commands
+## Inventories
+### Supply inventory with `-i` flag with commands
 
 ```ansible -i inventory -m shell -a “hostname"```
 
-###[Can be set in ansible.cfg](http://docs.ansible.com/ansible/intro_configuration.html#inventory)
+### [Can be set in ansible.cfg](http://docs.ansible.com/ansible/intro_configuration.html#inventory)
  
  `inventory = /etc/ansible/hosts`
-##Static inventory
+### Static inventory
 
 defined in ini style
 
@@ -29,7 +34,7 @@ hostname4 ansible_host=192.168.1.4
 ```
 
 
-##Dynamic inventory
+### Dynamic inventory
 
 returns json
 ```
@@ -49,11 +54,11 @@ returns json
 }
 ```
 
-#Modules
+## Modules
 [file](http://docs.ansible.com/ansible/file_module.html), [stat](http://docs.ansible.com/ansible/stat_module.html), [lineinfile](http://docs.ansible.com/ansible/lineinfile_module.html) etc
-## file module example
+### file module example
 
-### Module usage
+#### Module usage
 
 ```
 file: 
@@ -61,33 +66,33 @@ file:
   state: absent
 ```
 
-### Short hand
+#### Short hand
 
 ```
 file: path=”/etc/config.cnf” state=”absent”
 ```
 
-# Variables
+## Variables
 
-## Variable can be used in inventories, playbooks, roles, defaults
+### Variable can be used in inventories, playbooks, roles, defaults
 
-# Facts
+## Facts
 
-## Hostvars
+### Hostvars
 
-## Setup module to retrieve facts
+### Setup module to retrieve facts
 
-## Debug module to verify facts
+### Debug module to verify facts
 
-#Plays
+## Plays
 
-#Individual roles
+## Individual roles
 
-#Playbooks
+## Playbooks
 
 File with a collection of roles/plays
 
-# Configuration files
+## Configuration files
 
 /etc/ansible/ansible.cfg
 
