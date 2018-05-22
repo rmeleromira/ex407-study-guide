@@ -24,11 +24,11 @@ defined in ini style
 
 ```
 [router]
-hostname1 ansibe_host=192.168.1.1
+hostname1 ansible_host=192.168.1.1
 [webserver]
-hostname2 ansibe_host=192.168.1.2
+hostname2 ansible_host=192.168.1.2
 [database]
-hostname3 ansibe_host=192.168.1.3
+hostname3 ansible_host=192.168.1.3
 [appserver]
 hostname4 ansible_host=192.168.1.4
 ```
@@ -53,6 +53,19 @@ returns json
   }
 }
 ```
+
+### Nested Groups, range interval
+```
+[france]
+paris[1:2].domain.com
+[germany]
+munich[1:2].domain.com
+berlin[1:4].domain.com
+[europe:children]
+france
+germany
+```
+
 
 ## Modules
 [file](http://docs.ansible.com/ansible/file_module.html), [stat](http://docs.ansible.com/ansible/stat_module.html), [lineinfile](http://docs.ansible.com/ansible/lineinfile_module.html) etc
